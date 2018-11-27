@@ -1,0 +1,164 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{array}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://www.linkedin.com/in/kushal-singh-thakur/}{\Large Kushal Singh Thakur}} & Email : \href{mailto:singhkushal937@gmail.com}{singhkushal937@gmail.com}\\
+  \href{https://github.com/Kush026}{https://github.com/Kush026} & Mobile : +91 9498073574 \\
+\end{tabular*}
+
+%-----------SUMMARY--------------
+\section{Summary}
+Software Engineer with 2+ years of experience in developing a large and complex web application. Ability to troubleshoot problems and automate tasks. Built applications from ground zero and seen it through all phase of development cycles.
+
+%-----------Expertise----------
+\section{Expertise}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{m{0.5\textwidth} m{0.5\textwidth}}
+	 Web Development &  Object-oriented Programming \\
+	 Design Patterns & Test-driven Development \\
+	 
+	 Troubleshooting \& Optimization & Responsive Web Design \\
+\end{tabular}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology, Madras}{Chennai, India}
+      {B. Tech in Aerospace and M. Tech in Applied Mechanics}{July 2011 -- April 2016}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+    	{FP Tech Science Pvt. Ltd.}{Bengaluru, India}
+    	{Software Development Engineer}{Dec 2017 - Present}
+    \resumeItemListStart
+    	\resumeItem{Search Application}
+    		{Extensively worked on search system. Designed a REST service to search based on multiple filters and category. Implemented dynamic price range facet.}
+    	\resumeItem{Category Hierarchies}
+    		{Built a REST service solely which was responsible for storing and manipulating category
+    			hierarchically data and metadata.}
+    	\resumeItem{Auto Suggest}
+    		{Redesigned the application to make it multi-lingual.}
+    \resumeItemListEnd
+    
+    \textbf{Tech: } Java, Spring, Spring boot, Hibernate, MySQL, Apache Solr, Maven, Gradle
+    
+    \resumeSubheading
+      {ZenParent Solutions Pvt. Ltd.}{Bengaluru, India}
+      {Software Developer}{July 2016 - Oct 2017}
+      \resumeItemListStart
+        \resumeItem{User Generated Content}
+          {Developed an application which allows users to publish articles on the website.}
+        \resumeItem{Website Revamp}
+          {Revamped website and was solely responsible for Backend development.}
+        \resumeItem{Automation}
+          {Implemented algorithm for automating the distribution of personalized newsletters, email notifications and data sheet generation.}
+        \resumeItem{Apache Solr}
+          {Integrated Apache Solr with Wordpress to speed up the content search across the website.}
+        \resumeItem{Troubleshooting \& Performance}
+          {Troubleshoot the site performance issues using New Relic.}
+        \resumeItem{AMP pages}
+          {Designed Accelerated Mobile Pages (AMPs) to enhance mobile user experience.}
+          
+          
+      \resumeItemListEnd
+      
+      \textbf{Tech: } WordPress, JavaScript, PHP, MySQL, Apache Solr, HTML, CSS, AJAX, JSON, Git
+
+  \resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{Technical Skills}
+  \begin{tabular*}{\textwidth}{ r @{\hskip5pt}l}
+  	\textbf{Programming/Scripting}: & Java, JavaScript, Python, PHP, SQL. \\
+  	\textbf{Web}: & Spring, Spring Boot, REST, Hibernate, HTML, CSS, AJAX, JSON \\
+  	\textbf{Data Stores}: & MySQL, Apache Solr \\
+  	\textbf{Miscellaneous}: & Git, Maven, Gradle, Linux, Unix
+  \end{tabular*}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+	\resumeSubItem{Boggle Word Game}
+		{Designed Boggle word game in Java language.}
+	\resumeSubItem{Seam-carving}
+		{Seam-carving is a content-aware image resizing technique where the image is reduced in size by one pixel of height (or width) at a time}
+\resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
