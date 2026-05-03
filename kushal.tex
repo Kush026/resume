@@ -1,161 +1,134 @@
-\documentclass[letterpaper,11pt]{article}
+\documentclass[10pt,a4paper]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+% ---------- Packages ----------
+\usepackage[margin=0.6in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{tabularx}
-\usepackage{array}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{parskip}
+\usepackage{ragged2e}
 
+% ---------- Colors ----------
+\definecolor{primary}{HTML}{1F3A5F}
+\definecolor{accent}{HTML}{3A6EA5}
+\definecolor{muted}{HTML}{555555}
 
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+% ---------- Hyperlinks ----------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accent,
+    urlcolor=accent
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+% ---------- Section formatting ----------
+\titleformat{\section}
+    {\Large\bfseries\color{primary}}
+    {}{0em}{}[\vspace{-2pt}\color{primary}\hrule height 1pt\vspace{2pt}]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+\titleformat{\subsection}
+    {\normalsize\bfseries\color{primary}}
+    {}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% ---------- List formatting ----------
+\setlist[itemize]{leftmargin=1.2em, topsep=2pt, itemsep=2pt, parsep=0pt}
+
+% ---------- Custom commands ----------
+\newcommand{\role}[4]{%
+    \subsection*{#1 \textnormal{---} #2}%
+    \vspace{-4pt}%
+    {\color{muted}\textit{#3 \textbar{} #4}}%
+    \vspace{2pt}%
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\tag}[1]{\textbf{#1:}}
 
-\renewcommand{\labelitemii}{$\circ$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% ---------- Remove page numbers ----------
+\pagestyle{empty}
 
 \begin{document}
 
-%----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{https://www.linkedin.com/in/kushal-singh-thakur/}{\Large Kushal Singh Thakur}} & Email : \href{mailto:singhkushal937@gmail.com}{singhkushal937@gmail.com}\\
-  \href{https://github.com/Kush026}{https://github.com/Kush026} & Mobile : +91 9498073574 \\
-\end{tabular*}
+% ---------- Header ----------
+\begin{center}
+    {\Huge\bfseries\color{primary} Kushal Singh}\\[4pt]
+    {\color{muted}
+        \faEnvelope\ \href{mailto:singhkushal937@gmail.com}{singhkushal937@gmail.com}
+        \quad\textbar\quad
+        \faPhone\ (+91) 9498073574
+        \quad\textbar\quad
+        \faLinkedin\ \href{https://linkedin.com/in/kushal-singh-thakur}{in/kushal-singh-thakur}
+        \quad\textbar\quad
+        \faGithub\ \href{https://github.com/Kush026}{github.com/Kush026}
+    }
+\end{center}
 
-%-----------SUMMARY--------------
-\section{Summary}
-Software Engineer with 2+ years of experience in developing a large and complex web application. Ability to automate tasks and troubleshoot problems. Developed applications from ground zero and was involved in all phases of the development.
+% ---------- Summary ----------
+\section*{Summary}
+Staff Software Engineer with 10 years building distributed, cloud-native platforms — twice as a founding engineer carrying systems from zero-to-one through production scale. Shapes architecture for high-throughput distributed systems handling tens of millions of events per hour, raises the production bar through progressive delivery and observability, and multiplies team output through mentorship and platform thinking. Currently working at the intersection of Agentic AI and data-intensive systems.
 
-%-----------Expertise----------
-\section{Expertise}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{m{0.5\textwidth} m{0.5\textwidth}}
-	 Web Development &  Object-oriented Programming \\
-	 Design Patterns & Test-driven Development \\
-\end{tabular}
+% ---------- Experience ----------
+\section*{Experience}
 
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Indian Institute of Technology, Madras}{Chennai, India}
-      {B. Tech in Aerospace and M. Tech in Applied Mechanics}{July 2011 -- April 2016}
-  \resumeSubHeadingListEnd
+\role{Senior Member of Technical Staff}{Salesforce}{August 2021 -- Present}{Bengaluru}
+\begin{itemize}
+    \item \tag{Asset Inventory Platform} One of the founding engineers on the ingestion and serving layer now processing \textbf{600K asset/event records per minute}; shaped the platform's architecture from inception, led it through its largest reliability and scale milestones, and drove cross-team design reviews with upstream producers and downstream consumers to establish the data contracts and SLOs the platform runs on today.
+    \item \tag{Distributed Systems \& Performance} Diagnosed the serialization bottleneck at the core of the ingestion path and led a migration to an event-driven, distributed model with multi-threaded workers and fine-grained transaction boundaries --- unblocking concurrent multi-job execution and materially increasing throughput without a hardware footprint change.
+    \item \tag{Agentic AI Integration} Embedded agentic AI capabilities into the service ecosystem by building custom MCP servers and skills, directly improving developer productivity and reducing manual workflows.
+    \item \tag{Production-safe automation library} Co-developed an internal Python library to automate day-to-day operational tasks in a secure, auditable manner — enforcing compliance, eliminating manual changes, and adding a programmatic security layer.
+    \item \tag{Observability \& Reliability Engineering} Established end-to-end production confidence by building an integration test framework, instrumenting services with APM, standardizing API documentation via Swagger, and enabling progressive delivery through Argo Rollouts — collectively raising system reliability, resilience, and observability.
+    \item \tag{Multi-substrate deployment ownership} Owned the end-to-end deployment lifecycle for onboarding the platform onto a new GovCloud substrate with stricter compliance and access restrictions — required deep cross-stack changes across Helm, Kubernetes, AWS (RDS/SQS/SNS/S3), Spinnaker, and Terraform.
+    \item \tag{Streaming data pipeline} Designed the event pipeline that streams platform data into Data Cloud at 600K events/min, unlocking analytics and reporting use cases that were previously infeasible for downstream consumers.
+    \item \tag{Leadership \& recognition} Scrum Lead for the team; mentor to junior engineers. Winner, SDS Hackathon — configuration-driven asset ingestion with criticality scoring.
+\end{itemize}
 
+\role{Software Development Engineer}{Flipkart}{July 2019 -- August 2021}{Bengaluru}
+\begin{itemize}
+    \item \tag{Big Billion Day readiness lead} Owned the team's BBD scale-up; identified the hot bottlenecks, executed targeted fixes, and took the API to \textbf{2.5M requests/sec with zero major incidents} during peak --- the highest-traffic event on the platform.
+    \item \tag{Kubernetes migration — team pilot} Piloted one of the first services in the team to onboard onto the company-wide K8s migration; authored the deployment playbook the team adopted, shepherded subsequent services through it, and introduced HPA for demand-driven autoscaling — materially reducing deployment time and infra spend.
+    \item \tag{SuperCoin Zone revamp} Led end-to-end redesign of the SuperCoin experience with a new \textit{Progressive Milestone} construct and rewards page --- shipped to drive retention and spend frequency at scale.
+    \item \tag{High-throughput notifications} Designed and built the SuperCoin credit notification pipeline delivering millions of notifications daily with consistent latency and delivery guarantees.
+\end{itemize}
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
+\role{Software Development Engineer}{TiLA Labs}{December 2017 -- July 2019}{Bengaluru}
+\begin{itemize}
 
-    \resumeSubheading
-    	{FP Tech Science Pvt. Ltd.}{Bengaluru, India}
-    	{Software Development Engineer}{Dec 2017 - Present}
-    \resumeItemListStart
-    	\resumeItem{Search Application}
-    		{Designed and built multiple features in search applications such as RESTful API to search based on different filters, implemented various types of facets and dynamic price range facet.}
-    	\resumeItem{Category Hierarchies}
-    		{Developed an application solely which is responsible for storing, retrieving and manipulating category hierarchy data and metadata.}
-    	\resumeItem{Auto-suggest}
-    		{Redesigned the application to make it multi-lingual.}
-    \resumeItemListEnd
-    
-    \textbf{Tech: } Java, Spring, Spring boot, Hibernate, JUnit, Mockito, MySQL, Apache Solr, Maven, Gradle
-    
-    \resumeSubheading
-      {ZenParent Solutions Pvt. Ltd.}{Bengaluru, India}
-      {Software Developer}{July 2016 - Oct 2017}
-      \resumeItemListStart
-        \resumeItem{User Generated Content}
-          {Created a service which allows users to submit articles on the site which can be reviewed and approved manually or published automatically after a stipulated time interval.}
-        \resumeItem{Website Revamp}
-          {Revamped website and was solely responsible for Backend development.}
-        \resumeItem{Automation}
-          {Implemented an algorithm to generate personalized newsletters and email notifications.  I also designed a report generating system which was responsible for collecting article performance parameters from google analytics.}
-        \resumeItem{Apache Solr}
-          {Integrated Apache Solr with Wordpress to speed up the content search across the website.}
-        \resumeItem{Troubleshooting \& Performance}
-          {Troubleshoot the site performance issues using New Relic. Found critical issues on site which were degrading site performance and user traffic.}
-        \resumeItem{AMP pages}
-          {Designed Accelerated Mobile Pages (AMPs) to enhance mobile user experience.}
-          
-          
-      \resumeItemListEnd
-      
-      \textbf{Tech: } WordPress, JavaScript, PHP, MySQL, Apache Solr, HTML, CSS, AJAX, JSON, Git, JQuery
+    \item \tag{Search platform} Founding engineer on the search and discovery stack for a zero-to-one multi-language (English \& Arabic) e-commerce platform; built RESTful search APIs with filter-based querying, faceted navigation, and price-range faceting.
+    \item \tag{Auto-suggest (ground-up rewrite)} Redesigned the auto-complete service to support multi-language inputs; measurably improved discoverability across language cohorts.
+    \item \tag{Category hierarchy service} Built and owned the multi-lingual category hierarchy and metadata store.
+\end{itemize}
 
-  \resumeSubHeadingListEnd
+\role{Software Developer}{ZenParent}{July 2016 -- October 2017}{Bengaluru}
+\begin{itemize}
+    \item \tag{Contributor platform} Designed the external-writer framework with a view-based incentive model --- shipped end-to-end, drove content volume and engagement.
+    \item \tag{Pregnancy lifecycle framework} Introduced a lifecycle-stage model for expecting and new parents powering a custom algorithm for stage-specific newsletters and ad targeting --- improved relevance and revenue.
+    \item \tag{Website revamp} Sole backend owner for the full platform revamp.
+    \item \tag{Search \& mobile performance} Integrated Apache Solr with WordPress for content search; rolled out Accelerated Mobile Pages (AMP) across the platform to enhance mobile user experience and SEO.
+\end{itemize}
+
+% ---------- Education ----------
+\section*{Education}
+\textbf{Indian Institute of Technology, Madras (IIT Madras)} \hfill Chennai, 2016\\
+Dual Degree: B.\,Tech in Aerospace Engineering \& M.\,Tech in Applied Mechanics
+
+\textbf{Certifications:} Salesforce Certified Scrum Lead
 
 
-%--------PROGRAMMING SKILLS------------
-\section{Technical Skills}
-  \begin{tabular*}{\textwidth}{ r @{\hskip5pt}l}
-  	\textbf{Programming/Scripting}: & Java, JavaScript, Python, PHP, SQL. \\
-  	\textbf{Web}: & Spring, Spring Boot, REST, Hibernate, HTML, CSS, AJAX, JSON \\
-  	\textbf{Data Stores}: & MySQL, Apache Solr \\
-  	\textbf{Miscellaneous}: & Git, Junit, Maven, Gradle, Linux, Unix
-  \end{tabular*}
+% ---------- Skills ----------
+\section*{Skills}
+\begin{itemize}[leftmargin=1.2em, itemsep=1pt]
+    \item \tag{Languages \& Frameworks} Java, Python, C, JavaScript, PHP, Spring Boot, Spring Batch
+    \item \tag{Architecture} Distributed Systems, Microservices, Event-Driven Design, Domain-Driven Design
+    \item \tag{Cloud \& Infra} AWS (RDS, SQS, SNS, S3, etc.), Terraform, Kubernetes, Docker, Helm, Spinnaker
+    \item \tag{Datastore} MySQL, Redis, Kafka, Apache Solr, JPA
+    \item \tag{Observability} Prometheus, Micrometer, APM, OpenTelemetry, Splunk
+    \item \tag{AI \& Developer Tooling} Claude Code, Cursor, MCP Servers \& Skills
+    \item \tag{Foundations} Data Structures \& Algorithms, Object-Oriented Design, Design Patterns
+\end{itemize}
 
-%-----------PROJECTS-----------------
-\section{Projects}
-\resumeSubHeadingListStart
-	\resumeSubItem{Boggle Word Game}
-		{Designed Boggle word game in Java language.}
-	\resumeSubItem{Seam-carving}
-		{Seam-carving is a content-aware image resizing technique where the image is reduced in size by one pixel of height (or width) at a time.}
-\resumeSubHeadingListEnd
-
-
-%-------------------------------------------
 \end{document}
